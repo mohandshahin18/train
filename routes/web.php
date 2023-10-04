@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArticleController;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +16,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
 
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::group(['prefix' => LaravelLocalization::setLocale()], function()
+{
+
+Route::prefix('/news/')->middleware('auth')->group(function(){
+    Route::get('getdatatabledata', [ArticleController::class, 'getDataTableData'])->name('articels.getDataTableData');
+    Route::resource('articels',ArticleController::class);
+});
+});
+
+

@@ -169,6 +169,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\BladeServiceProvider::class,
+        Yajra\DataTables\DataTablesServiceProvider::class,
+
     ])->toArray(),
 
     /*
@@ -182,8 +184,10 @@ return [
     |
     */
 
+
+
     'aliases' => Facade::defaultAliases()->merge([
-        // 'Example' => App\Facades\Example::class,
+        'Datatables' => yajra\Datatables\Datatables::class,
     ])->toArray(),
 
 ];
