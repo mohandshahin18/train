@@ -32,11 +32,10 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
          $request->validate([
-            'title[ar]' => 'required',
-            'description[ar]' => 'required',
+            'title.ar' => 'required',
+            'description.ar' => 'required',
         ]);
 
-        // dd($request->title->ar);
 
         try {
             Article::create([

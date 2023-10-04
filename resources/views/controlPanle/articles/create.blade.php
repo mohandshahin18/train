@@ -28,8 +28,8 @@
                         <div class="form-group">
                             <label>{{ __('admin.Title is in Arabic') }} <span style="color: red">*</span></label>
                             <input type="text" name="title[ar]"
-                                class="form-control @error('title[ar]') is-invalid @enderror">
-                            @error('title[ar]')
+                                class="form-control @error('title.ar') is-invalid @enderror" value="{{ old('title.ar') }}">
+                            @error('title.ar')
                                 <small class="invalid-feedback"> {{ $message }}</small>
                             @enderror
                         </div>
@@ -38,16 +38,16 @@
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label>{{ __('admin.Title is in English') }} -- ({{ __('admin.Optional') }})</label>
-                            <input type="text" name="title[en]" class="form-control">
+                            <input type="text" name="title[en]" class="form-control" value="{{ old('title.en') }}">
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label>{{ __('admin.Description is in Arabic') }} <span style="color: red">*</span></label>
-                            <textarea name="description[ar]" id="" class="form-control @error('description[ar]') is-invalid @enderror"
-                                cols="30" rows="10"></textarea>
-                            @error('description[ar]')
+                            <textarea name="description[ar]" id="" class="form-control @error('description.ar') is-invalid @enderror"
+                                cols="30" rows="10">{{ old('description.ar') }}</textarea>
+                            @error('description.ar')
                                 <small class="invalid-feedback"> {{ $message }}</small>
                             @enderror
                         </div>
@@ -56,7 +56,7 @@
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label>{{ __('admin.Description is in English') }} -- ({{ __('admin.Optional') }})</label>
-                            <textarea name="description[en]" id="" class="form-control" cols="30" rows="10"></textarea>
+                            <textarea name="description[en]" id="" class="form-control" cols="30" rows="10">{{ old('description.en') }}</textarea>
                         </div>
                     </div>
 

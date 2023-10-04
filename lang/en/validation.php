@@ -181,8 +181,8 @@ return [
     */
 
     'attributes' => [
-        "title[ar]" => "Title is in Arabic",
-        "description[ar]" => "description is in Arabic"
+        "title.ar" => "Title is in Arabic",
+        "description.ar" => "description is in Arabic"
     ],
 
 ];
