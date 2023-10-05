@@ -25,14 +25,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="wrapper">
 
   <!-- Navbar -->
-    @include("controlPanle.navBar")
+    @include("controlPanle.layout.navBar")
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-        @include('controlPanle.assideMenu')
+        @include('controlPanle.layout.assideMenu')
 
   <!-- Content Wrapper. Contains page content -->
-        @include("controlPanle.contentHeader")
+        @include("controlPanle.layout.contentHeader")
     <!-- /.content-header -->
 
     <!-- Main content -->

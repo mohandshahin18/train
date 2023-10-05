@@ -1,12 +1,14 @@
 @extends('controlPanle.master')
-@section('title', 'Add new article')
-@section('subTitle', 'Add new article')
-@section('create-active', 'active')
+@section('title',  __('admin.Add new article') )
+@section('subTitle', __('admin.Add new article') )
+@section('article-menu-open','menu-open')
+@section('article-active','active')
+@section('article-create-active','active')
 @section('content')
 
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Add new article</h3>
+            {{-- <h3 class="card-title">{{ __('admin.Add new article') }}</h3> --}}
         </div>
         <!-- /.card-header -->
         <!-- form start -->
@@ -68,8 +70,8 @@
 
             <!-- /.card-body -->
 
-            <div class="card-footer ">
-                <button type="submit" class="btn btn-primary ">Submit</button>
+            <div class="card-footer" style="text-align: end">
+                <button type="submit" class="btn btn-primary ">{{ __('admin.Add') }}</button>
             </div>
         </form>
     </div>

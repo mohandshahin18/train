@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ArticleController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -33,6 +34,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 Route::prefix('/news/')->middleware('auth')->group(function(){
     Route::get('getdatatabledata', [ArticleController::class, 'getDataTableData'])->name('articels.getDataTableData');
     Route::resource('articels',ArticleController::class);
+
+    Route::get('users/getdatatabledata', [UserController::class, 'getDataTableData'])->name('users.getDataTableData');
+Route::resource('users',UserController::class);
 });
 });
 

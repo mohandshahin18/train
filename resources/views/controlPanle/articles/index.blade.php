@@ -11,8 +11,9 @@
 @stop
 @section('title', __('admin.Articles'))
 @section('subTitle', __('admin.All Articles'))
-@section('index-active', 'active')
-
+@section('article-menu-open','menu-open')
+@section('article-active','active')
+@section('article-index-active','active')
 @section('content')
     <table class="table  table-striped  table-hover " id="table">
         <thead class="bg-dark">
