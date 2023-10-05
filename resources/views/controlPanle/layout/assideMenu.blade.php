@@ -69,6 +69,30 @@
           </li>
 
 
+          <li class="nav-item @yield('project-menu-open')">
+            <a href="#" class="nav-link @yield('project-active')">
+              <i class="nav-icon fas fa-newspaper"></i>
+              <p>
+                    {{ __('admin.Projects') }}
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('projects.index') }}" class="nav-link @yield('project-index-active')">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{{ __('admin.All Projects') }}</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('projects.create') }}" class="nav-link @yield('project-create-active')">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{{ __('admin.Add project') }}</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
           <li class="nav-item">
             <a href="{{ route('logout') }}" class="nav-link"
             onclick="event.preventDefault();

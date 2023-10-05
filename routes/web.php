@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProjectController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
@@ -36,7 +37,9 @@ Route::prefix('/news/')->middleware('auth')->group(function(){
     Route::resource('articels',ArticleController::class);
 
     Route::get('users/getdatatabledata', [UserController::class, 'getDataTableData'])->name('users.getDataTableData');
-Route::resource('users',UserController::class);
+    Route::resource('users',UserController::class);
+
+    Route::resource('projects',ProjectController::class);
 });
 });
 

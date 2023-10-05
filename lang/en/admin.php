@@ -17,5 +17,12 @@ return [
     "Add" => "Add",
     "Users"=>"Users",
     "All Users"=>"All Users",
+    "All Projects"=>"All Projects",
+    "Projects"=>"Projects",
+    "Add project"=>"Add project",
+    "Add new project"=>"Add new project",
+    "Deadline"=>"Deadline",
+    "Select User"=>"Select User",
+    "Assigned User"=>"Assigned User",
 
  ];
